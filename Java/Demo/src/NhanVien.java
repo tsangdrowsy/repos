@@ -2,7 +2,7 @@ public class NhanVien {
     private String hoTen;
     private int soNgayCong;
     private char xepLoai;
-    private static final int LUONG_NGAY = 200_000;
+    private static int LUONG_NGAY = 200_000;
 
     public NhanVien(String hoTen, int soNgayCong) {
         this.hoTen = hoTen;
