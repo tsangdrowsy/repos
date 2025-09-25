@@ -15,7 +15,7 @@ public class TamGiac {
     public void setB(double b) { this.b = b; }
 
     public double getC() { return c; }
-    public void setC(double c) { this.c = c; }
+    public void setC(double c) { this.c = c; } 
 
     public double tinhChuVi() {
         return a + b + c;

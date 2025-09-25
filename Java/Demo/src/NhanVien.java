@@ -36,6 +36,18 @@ public class NhanVien {
         else if (soNgayCong >= 22) return 'B';
         else return 'C';
     }
+    public NhanVien(NhanVien nv)
+    {
+        hoTen=this.hoTen;
+        soNgayCong=this.soNgayCong;
+        
+    }
+
+    public NhanVien()
+    {
+        hoTen="Nguyen Van A";
+        soNgayCong=0;
+    }
 
     public double tinhLuong() {
         double heSoThuong = switch (xepLoai) {

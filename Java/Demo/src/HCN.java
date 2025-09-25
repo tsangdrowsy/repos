@@ -3,16 +3,28 @@ public class HCN {
     private double chieuDai;
     private double chieuRong;
 
-    //public HCN(double chieuDai, double chieuRong) {
-      //  this.chieuDai = chieuDai;
-       // this.chieuRong = chieuRong;
-    //}
-
-    public void HCN(double chieuDai, double chieuRong)
-    {
-        this.chieuDai=chieuDai;
-        this.chieuRong=chieuRong;
+    public HCN(double chieuDai, double chieuRong) {
+        this.chieuDai = chieuDai;
+        this.chieuRong = chieuRong;
     }
+
+    //public HCN()
+    //{
+      //  chieuDai=5;
+        //chieuRong=4;
+    //}
+    public HCN(HCN hcn)
+    {
+        chieuDai=this.chieuDai;
+        chieuRong=this.chieuRong;
+    }
+
+
+    //public void HCN(double chieuDai, double chieuRong)
+    //{
+      //  this.chieuDai=chieuDai;
+        //this.chieuRong=chieuRong;
+    //}
     public double getChieuDai() {
         return chieuDai;    
     }
