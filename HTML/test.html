@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Phiếu Đăng Ký</title>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    .adobe{
+        position: center;
+        height: 60px;
+    }
+  </style>
+
+</head>
+<body>
+    <img class="adobe" src="Images/adobe.gif" alt ="adobe">
+
+
+  <h2>PHIẾU ĐĂNG KÝ</h2>
+  <form>
+
+    <label>Họ và tên: *</label><br>
+    <input type="text" name="fullname" required><br><br>
+
+    <label>Địa chỉ: *</label><br>
+    <input type="text" name="address" required><br><br>
+
+    <label>Email: *</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Giới tính:</label><br>
+    <input type="radio" name="gender" value="Nam"> Nam
+    <input type="radio" name="gender" value="Nữ"> Nữ<br><br>
+
+    <label>Sở thích:</label><br>
+    <input type="checkbox" name="hobby" value="Thể thao"> Thể thao
+    <input type="checkbox" name="hobby" value="Văn học"> Văn học
+    <input type="checkbox" name="hobby" value="CNTT"> Công nghệ thông tin
+    <input type="checkbox" name="hobby" value="Lịch sử"> Lịch sử
+    <input type="checkbox" name="hobby" value="Game"> Game<br><br>
+
+    <label>Chuyên ngành:</label><br>
+    <select name="major">
+      <option value="web">Công nghệ Web</option>
+      <!-- Add more options if needed -->
+       <option value="web">Công nghệ thông tin</option>
+    </select><br><br>
+
+    <label>Gửi hình:</label><br>
+    <input type="file" name="image"><br><br>
+
+    <label>Yêu cầu:</label><br>
+    <textarea name="requirements" rows="4" cols="40"></textarea><br><br>
+
+    <input type="submit" value="Gửi thông tin">
+    <input type="reset" value="Nhập lại">
+
+  </form>
+</body>
+</html>
