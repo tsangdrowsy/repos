@@ -30,6 +30,6 @@ public class GiaoVien {
     }
 
     public void XuatGV() {
-        System.out.println("Ten Giao Vien: " + TenGV + " | So Nhom Huong Dan: " + SoNhomHuongDan);
+        System.out.println("Ten Giao Vien: "+TenGV+" "+"So Nhom Huong Dan: "+SoNhomHuongDan);
     }
 }

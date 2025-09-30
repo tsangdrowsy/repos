@@ -1,14 +1,18 @@
 <dsgiaovien>
     <giaovien>
-        <ten>Nguyễn Văn A</ten>
+        <ten>Nguyen Van A</ten>
         <sonhom>2</sonhom>
     </giaovien>
     <giaovien>
-        <ten>Trần Thị B</ten>
+        <ten>Tran Thi B</ten>
         <sonhom>1</sonhom>
     </giaovien>
     <giaovien>
-        <ten>Lê Văn C</ten>
+        <ten>Le Van C</ten>
+        <sonhom>3</sonhom>
+    </giaovien>
+    <giaovien>
+        <ten>Bui Minh Tinh</ten>
         <sonhom>3</sonhom>
     </giaovien>
 </dsgiaovien>
