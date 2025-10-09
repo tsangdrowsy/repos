@@ -1,5 +1,10 @@
 {
     "files.associations": {
         "xutility": "cpp"
-    }
+    },
+    "git.ignoreLimitWarning": true,
+    "C_Cpp.default.compilerPath": "C:/TDM-GCC-64/bin/g++.exe",
+    
+    "java.project.outputPath": "bin"
+
 }

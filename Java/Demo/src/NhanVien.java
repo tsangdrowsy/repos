@@ -38,8 +38,8 @@ public class NhanVien {
     }
     public NhanVien(NhanVien nv)
     {
-        hoTen=this.hoTen;
-        soNgayCong=this.soNgayCong;
+        this.hoTen=nv.hoTen;
+        this.soNgayCong=nv.soNgayCong;
         
     }
 

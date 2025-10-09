@@ -15,8 +15,8 @@ public class HCN {
     //}
     public HCN(HCN hcn)
     {
-        chieuDai=this.chieuDai;
-        chieuRong=this.chieuRong;
+        this.chieuDai=hcn.chieuDai;
+        this.chieuRong=hcn.chieuRong;
     }
 
 
