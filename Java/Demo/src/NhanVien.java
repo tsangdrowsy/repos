@@ -1,67 +1,56 @@
-public class NhanVien {
-    private String hoTen;
-    private int soNgayCong;
-    private char xepLoai;
-    private static int LUONG_NGAY = 200_000;
 
-    public NhanVien(String hoTen, int soNgayCong) {
-        this.hoTen = hoTen;
-        this.soNgayCong = soNgayCong;
-        this.xepLoai = tinhXepLoai();
-    }
+    import java.time.LocalDate;
 
-    public String getHoTen() {
-        return hoTen;
-    }
+    abstract public class NhanVien {
+        String maNV, tenNV;
+        int nvl, nsinh;
+        String sex;
+        double hsl;
+        protected static double LuongCoBan = 1150;
 
-    public void setHoTen(String hoTen) {
-        this.hoTen = hoTen;
-    }
+        public NhanVien(String maNV, String tenNV, int nvl, int nsinh, double hsl, String sex) {
+            this.maNV = maNV;
+            this.tenNV = tenNV;
+            this.nvl = nvl;
+            this.nsinh = nsinh;
+            this.hsl = hsl;
+            this.sex = sex;
+        }
 
-    public int getSoNgayCong() {
-        return soNgayCong;
-    }
+        public double PhuCapThamNien() {
+            int tn = LocalDate.now().getYear() - nvl;
+            if (tn >= 5)
+                return tn * NhanVien.LuongCoBan / 100;
+            return 0;
 
-    public void setSoNgayCong(int soNgayCong) {
-        this.soNgayCong = soNgayCong;
-        this.xepLoai = tinhXepLoai(); 
-    }
+        }
 
-    public char getXepLoai() {
-        return xepLoai;
-    }
+         abstract public char XepLoai();
 
-    private char tinhXepLoai() {
-        if (soNgayCong > 26) return 'A';
-        else if (soNgayCong >= 22) return 'B';
-        else return 'C';
-    }
-    public NhanVien(NhanVien nv)
-    {
-        this.hoTen=nv.hoTen;
-        this.soNgayCong=nv.soNgayCong;
+        abstract public double TinhLuong();
+
+        public double ThuNhap() {
+            char xl = XepLoai();
+            double hsThiDua = 0;
+            if (xl == 'A')
+                 hsThiDua = 1.0;
+            if (xl == 'B')
+                 hsThiDua = 0.75;
+            if (xl == 'C')
+                 hsThiDua = 0.5;
+            return hsThiDua * TinhLuong() + PhuCapThamNien();
+
+        }
+
         
-    }
 
-    public NhanVien()
-    {
-        hoTen="Nguyen Van A";
-        soNgayCong=0;
-    }
+        public void HienThi() {
 
-    public double tinhLuong() {
-        double heSoThuong = switch (xepLoai) {
-            case 'A' -> 1.05;
-            case 'B' -> 1.02;
-            default -> 1;
-        };
-        return soNgayCong * LUONG_NGAY * heSoThuong;
-    }
+            System.out.println("MaNV: " + maNV + " tenNV: " + tenNV + " namVaoLam: " + nvl + " namSinh: " + nsinh  + " He So Luong: " + hsl + " Gioi Tinh: " + sex);
+           
+            System.out.println("\nThuNhap: " + ThuNhap());
+            // System.out.println("Diem chu: " + diemChu());
+            System.out.println("\n                   ");
+        }
 
-    public void inThongTin() {
-        System.out.println("Ho ten: " + hoTen);
-        System.out.println("So ngay cong: " + soNgayCong);
-        System.out.println("Xep loai: " + xepLoai);
-        System.out.println("Luong: " + tinhLuong() + " dong");
     }
-}
