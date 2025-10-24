@@ -1,3 +1,4 @@
+package TH4.Polymorphorism;
 public class Salary extends Employee_Poly {
     private double salary;
 

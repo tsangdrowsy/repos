@@ -1,3 +1,4 @@
+package TH2;
 import java.util.*;
 public class HCN {
     private double chieuDai;

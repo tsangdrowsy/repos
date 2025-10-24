@@ -1,3 +1,4 @@
+package TH3.HangHoa;
 import java.util.*;
 
 public class Hanghoa {

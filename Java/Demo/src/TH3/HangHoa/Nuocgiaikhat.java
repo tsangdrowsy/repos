@@ -1,3 +1,4 @@
+package TH3.HangHoa;
 public class Nuocgiaikhat extends Hanghoa{
         private String donvitinh;
         private int soluong;

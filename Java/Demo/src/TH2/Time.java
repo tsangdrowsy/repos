@@ -1,3 +1,4 @@
+package TH2;
 public class Time {
     private int gio, phut, giay;
 

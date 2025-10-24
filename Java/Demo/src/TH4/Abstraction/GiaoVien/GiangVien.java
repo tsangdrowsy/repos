@@ -1,61 +1,52 @@
 package TH4.Abstraction.GiaoVien;
 
 class GiangVien extends Nguoi {
-    private String maSo;
-    private double luongCoBan;
-    private double heSo;
-    private String chucVu;
+    String maSo;
+    double luongCoBan;
+    double heSo;
+    String chucVu;
 
-    public GiangVien(String hoTen, String ngaySinh, String gioiTinh,
-            String maSo, double luongCoBan, double heSo, String chucVu) {
-        // Gọi constructor lớp cha (Nguoi)
+    protected static double LuongCoBanGV = 1150.0;
+
+    public GiangVien(String hoTen, String ngaySinh, String gioiTinh, String maSo, double luongCoBan, double heSo, String chucVu) {
         super(hoTen, ngaySinh, gioiTinh);
-
-        // Gán mã số
         this.maSo = maSo;
+        this.luongCoBan = LuongCoBanGV;
 
-        // Gán lương cơ bản
-        this.luongCoBan = luongCoBan;
-
-        // Kiểm tra hệ số hợp lệ
-        if (heSo == 2.34 || heSo == 2.67 || heSo == 3.0 || heSo == 3.33) {
+        if (heSo == 2.34 || heSo == 2.67 || heSo == 3.0 || heSo == 3.3) {
             this.heSo = heSo;
         } else {
-            this.heSo = 2.34; // mặc định
+            this.heSo = 2.34;
         }
 
-        // Kiểm tra chức vụ hợp lệ
-        if (chucVu.equalsIgnoreCase("trưởng khoa") ||
-                chucVu.equalsIgnoreCase("phó khoa") ||
-                chucVu.equalsIgnoreCase("giảng viên")) {
+        if (chucVu.equalsIgnoreCase("truong khoa") || chucVu.equalsIgnoreCase("pho khoa") || chucVu.equalsIgnoreCase("giang vien")) {
             this.chucVu = chucVu.toLowerCase();
         } else {
-            this.chucVu = "giảng viên";
+            this.chucVu = "giang vien";
         }
     }
 
-    public double tinhLuong() {
-        double phuCap;
-
-        if (chucVu.equalsIgnoreCase("trưởng khoa")) {
-            phuCap = 5 * luongCoBan;
-        } else if (chucVu.equalsIgnoreCase("phó khoa")) {
-            phuCap = 4 * luongCoBan;
+    private double TinhPCCV() {
+        if (chucVu.equals("truong khoa")) {
+            return 5 * LuongCoBanGV;
+        } else if (chucVu.equals("pho khoa")) {
+            return 4 * LuongCoBanGV;
         } else {
-            phuCap = 2 * luongCoBan;
+            return 0;
         }
-
-        return luongCoBan * heSo + phuCap;
     }
 
-    @Override
-    public void xuatThongTin() {
-
-        System.out.println("Mã số: " + maSo);
-        System.out.println("Lương cơ bản: " + luongCoBan);
-        System.out.println("Hệ số: " + heSo);
-        System.out.println("Chức vụ: " + chucVu);
-        System.out.println("Lương thực lĩnh: " + tinhLuong());
+    public double TinhLuong() {
+        return LuongCoBanGV * heSo + TinhPCCV();
     }
 
+    public void Xuat() {
+        super.Xuat();
+        System.out.println("Ma so: " + maSo);
+        System.out.printf("Luong co ban (dung trong tinh toan): %.2f%n", LuongCoBanGV);
+        System.out.println("He so luong: " + heSo);
+        System.out.println("Chuc vu: " + chucVu);
+        System.out.printf("Phu cap chuc vu: %.2f%n", TinhPCCV());
+        System.out.printf("Tong luong: %.2f%n", TinhLuong());
+    }
 }

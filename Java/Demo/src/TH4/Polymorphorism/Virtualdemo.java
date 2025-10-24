@@ -1,3 +1,5 @@
+package TH4.Polymorphorism;
+
 public class Virtualdemo {
     public static void main(String[] args) {
         Salary s = new Salary(" Mohd Mohtashim", "Ambehta, UP", 3, 3600);
