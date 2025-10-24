@@ -1,3 +1,5 @@
+package TH4.Abstraction.NhanVien;
+
 public class NVsx extends NhanVien{
     private int snn;
     public static double hsNangNhoc=0.1;

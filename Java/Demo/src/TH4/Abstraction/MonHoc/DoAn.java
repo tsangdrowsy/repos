@@ -1,3 +1,4 @@
+package TH4.Abstraction.MonHoc;
 class DoAn extends MonHoc {
     private double diemGVHD, diemGVPB;
 

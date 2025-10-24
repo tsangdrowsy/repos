@@ -1,3 +1,4 @@
+package TH4.Abstraction.MonHoc;
 abstract class MonHoc {
     protected String maMH;
     protected String tenMH;

@@ -1,34 +1,29 @@
-public class Nguoi {
-    String cmd, hten;
 
-    public String getCmd() {
-        return cmd;
-    }
-
-    public void setCmd(String cmd) {
-        this.cmd = cmd;
-    }
-
-    public String getHten() {
-        return hten;
-    }
-
-    public void setHten(String hten) {
-        this.hten = hten;
-    }
-
-    public Nguoi(String cmd, String hten) {
-        this.cmd = cmd;
-        this.hten = hten;
-    }
+class Nguoi {
+    String hoTen;
+    String ngaySinh;
+    boolean gioiTinh;
 
     public Nguoi() {
-        this.cmd = "123456";
-        this.hten = "Nguyen Van An";
+        this.hoTen = "";
+        this.ngaySinh = "01/01/2000";
+        this.gioiTinh = true;
     }
 
-    public void xuat() {
-        System.out.println("Ho ten: " + hten + " CMD: " + cmd);
+    public Nguoi(String hoTen, String ngaySinh, String gioiTinh) {
+        this.hoTen = hoTen;
+        this.ngaySinh = ngaySinh;
+        if (gioiTinh.equalsIgnoreCase("nu")) {
+            this.gioiTinh = false;
+        } else {
+            this.gioiTinh = true;
+        }
+    }
+
+    public void Xuat() {
+        System.out.println("==============================================");
+        System.out.println("Ho ten: " + hoTen);
+        System.out.println("Ngay sinh: " + ngaySinh);
+        System.out.println("Gioi tinh: " + (gioiTinh ? "nam" : "nu"));
     }
 }
-

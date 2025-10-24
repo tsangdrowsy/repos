@@ -1,3 +1,5 @@
+package TH4.Abstraction.NhanVien;
+
 public class NVkd extends NhanVien {
     private int dsth;
     private int doanhso;

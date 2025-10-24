@@ -1,3 +1,4 @@
+package TH4.Abstraction.MonHoc;
 class LyThuyet extends MonHoc {
     private double diemTL, diemCK; 
     

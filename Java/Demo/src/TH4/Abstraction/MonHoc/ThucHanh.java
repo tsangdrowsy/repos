@@ -1,3 +1,4 @@
+package TH4.Abstraction.MonHoc;
 class ThucHanh extends MonHoc{
     private double[] diemKT= new double [4];
 

@@ -1,3 +1,4 @@
+package TH4.Interface.VD2;
 public class TamGiac {
 
     private double a, b, c;
