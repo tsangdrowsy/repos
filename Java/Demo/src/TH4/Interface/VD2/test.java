@@ -1,3 +1,4 @@
+package TH4.Interface.VD2;
 interface I {
     void methodI();
 }
